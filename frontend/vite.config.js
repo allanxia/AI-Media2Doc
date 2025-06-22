@@ -22,7 +22,7 @@ export default defineConfig(({ mode }) => {
       },
       proxy: {
         '/api': {
-          target: env.VITE_API_BASE_URL,
+          target: 'https://vite-media2doc.tenyunnet.cn',
           changeOrigin: true
         },
       },

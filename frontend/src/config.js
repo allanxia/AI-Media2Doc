@@ -8,6 +8,9 @@
 
 export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://vite-media2doc.tenyunnet.cn'
 
+console.log('API_BASE_URL配置', API_BASE_URL)
+console.log('import.meta.env.VITE_API_BASE_URL', import.meta.env.VITE_API_BASE_URL)
+
 // 各模块API路径
 export const API_PATHS = {
     CHAT_COMPLETIONS: '/api/v3/bots/chat/completions',
