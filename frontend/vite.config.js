@@ -8,6 +8,13 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [vue()],
     server: {
+      host: '0.0.0.0',
+      allowedHosts: [
+        'localhost',
+        '127.0.0.1',
+        'media2doc.tenyunnet.cn',
+        '.tenyunnet.cn'
+      ],
       headers: {
         'Cross-Origin-Opener-Policy': 'same-origin',
         'Cross-Origin-Embedder-Policy': 'require-corp',
