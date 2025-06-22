@@ -1,4 +1,3 @@
-git+https://github.com/volcengine/ai-app-lab.git@v0.2.4#subdirectory=arkitect
 opentelemetry-sdk>=1.22.0
 opentelemetry-semantic-conventions>=0.43b0
 throttled-py==2.0.2
