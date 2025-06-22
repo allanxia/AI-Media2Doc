@@ -4,7 +4,9 @@
  */
 
 // API服务基础URL
-export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080'
+//export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080'
+
+export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://vite-media2doc.tenyunnet.cn'
 
 // 各模块API路径
 export const API_PATHS = {
