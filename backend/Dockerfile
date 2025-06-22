@@ -19,6 +19,7 @@ FROM base AS builder
 WORKDIR /
 
 COPY requirements.txt .
+COPY install_arkitect.py .
 
 RUN set -ex && \
     mkdir ~/.pip && \
@@ -28,7 +29,8 @@ RUN set -ex && \
 RUN set -ex && \
     python -m venv .venv && \
     pip install --upgrade pip && \
-    pip install -r ./requirements.txt
+    python install_arkitect.py && \
+    pip install --no-cache-dir -r ./requirements.txt
 
 # ------------------- Stage 2: Final Stage ------------------------------
 FROM base
