@@ -10,7 +10,8 @@ ENV LANG=C.UTF-8 \
 
 RUN set -ex && \
     sed -i 's/deb.debian.org/mirrors.cloud.tencent.com/g' /etc/apt/sources.list.d/debian.sources && \
-    apt update
+    apt update && \
+    apt install -y git
 
 # ------------------- Stage 1: Build Stage ------------------------------
 FROM base AS builder
