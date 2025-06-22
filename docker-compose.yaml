@@ -1,6 +1,8 @@
 services:
   backend:
-    image: ai-media2doc-backend:latest
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     env_file:
       - "variables.env"
     deploy:
@@ -10,7 +12,9 @@ services:
       - "8080:8080"
 
   frontend:
-    image: ai-media2doc-frontend:latest
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
     deploy:
       mode: replicated
       replicas: 1
